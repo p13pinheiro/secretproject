@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  webservice:
+    labels:
+      shipyard.route: '/'
+      shipyard.route.backend: '/api'
+    build:
+      context: .
+    ports:
+      - '8090:8090'
+  webservice2:
+    labels:
+      shipyard.route.backend: '/api2'
+    build:
+      context: .
+    ports:
+      - '8090:8090'
